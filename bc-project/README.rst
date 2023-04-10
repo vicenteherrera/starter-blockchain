@@ -3,7 +3,8 @@
 ## How this project was created
 
 ```console
-poetry new --name notebooks -src bc-project
+# from root repo folder
+poetry new --name notebooks --src bc-project
 cd bc-project
 poetry add jupyterlab
 poetry run jupyter-lab
