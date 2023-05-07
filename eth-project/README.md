@@ -24,7 +24,9 @@ poetry add py-solc-x
 * [Configure pyenv](https://github.com/pyenv/pyenv#installation)
 * Install specific Python 3.9 version:  
   `pyenv install 3.9`  
-  `pyenv local 3.9`  
+  `pyenv local 3.9`
+* Install Python dependencies
+  * `poetry install`
 * Copy `sample.envrc` to `.envrc`, and edit it with a Ganache private key. 
   * You can use [direnv]() with `direnv allow` to automatically load the variable into memory.
   * Or you can load it manually with `source .direnv` on _Linux/Macos Bash_.
