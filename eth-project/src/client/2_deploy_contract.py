@@ -1,6 +1,7 @@
 import sys
 import time
 import pprint
+import os
 
 from web3 import Web3
 from solcx import compile_source, install_solc
@@ -20,8 +21,9 @@ def deploy_contract(w3, contract_interface, from_address):
 
 # Connection using HTTP
 ip = "127.0.0.1"
-# Set Ganache to expose through WLS2 interface IP like 172.23.64.1 and use that IP address
-ip = "172.23.64.1"
+# If you are using Windows with WSL2 Linux, set Ganache to expose through WSL2 network interface
+# and change ip var to also use that interface, for example with 172.23.64.1
+# ip = "172.23.64.1"
 # Ganache uses port 7545, other networks uses 8545
 port = "7545"
 
@@ -41,7 +43,11 @@ compiled_sol = compile_source_file(contract_source_path)
 contract_id, contract_interface = compiled_sol.popitem()
 
 # Deploy contract
-from_address = '0xe061f951eA9cBc6DE36fAea49DF6D04922BeFE83'
+# Change this to your source wallet address
+from_address = os.environ.get("FROM_ADDRESS")
+# Or as an example, hardcode its value here (don't commit in this case)
+from_address = '0x000000000000000000000000000000000000000000'
+# You could also infer from address from its private key, see 1_transactions.py
 contract_address = deploy_contract(w3, contract_interface, from_address)
 print(f'Deployed {contract_id} to: {contract_address}\n')
 store_var_contract = w3.eth.contract(address=contract_address, abi=contract_interface["abi"])
