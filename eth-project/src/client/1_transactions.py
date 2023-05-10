@@ -5,14 +5,14 @@ from web3 import Web3
 from web3.middleware import construct_sign_and_send_raw_middleware
 
 ## IP ADDRESS to Ethereum node
-ip = os.environ.get("ethnet_ip")
+ip = os.environ.get("ethnet_ip").replace("\"","")
 # Or hardcode the value here
 # ip = "127.0.0.1"
 # If using Windows and WSL2 Linux, set Ganache to expose through WSL2 interface IP like 172.23.64.1
 # ip = "172.23.64.1"
 
 ## PORT to Ethereum node
-port = os.environ.get("ethnet_port")
+port = os.environ.get("ethnet_port").replace("\"","")
 # or hardcode the value here, Ganache uses port 7545, other networks uses 8545
 # port = "7545"
 
@@ -29,7 +29,7 @@ last_block=w3.eth.get_block('latest')
 print("timestamp of last block: " + str(last_block.timestamp))
 
 ## PRIVATE KEY for SOURCE ADDRESS
-private_key = os.environ.get("PRIVATE_KEY")
+private_key = os.environ.get("PRIVATE_KEY").replace("\"","")
 # Or as an example, hardcode its value here (don't commit in this case)
 # private_key = '0x0000000000000000000000000000000000000000000000000000000000000000'
 assert private_key is not None, "You must set private_key variable"
@@ -41,7 +41,7 @@ address=account.address
 
 # DESTINATION ADDRESS
 # Destination for transaction operations
-address2 = os.environ.get("TO_ADDRESS")
+address2 = os.environ.get("TO_ADDRESS").replace("\"","")
 # Or hardcode it here
 # address2="0x000000000000000000000000000000000000000000"
 
