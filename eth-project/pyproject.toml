@@ -8,6 +8,7 @@ authors = ["Vicente Herrera <vicenteherrera@vicenteherrera.com>"]
 python = "^3.9"
 web3 = "^6.1.0"
 py-solc-x = "^1.1.1"
+eth-account = "^0.8.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"

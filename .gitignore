@@ -129,4 +129,6 @@ dmypy.json
 .pyre/
 .vscode/settings.json
 workspace-eth/contracts/artifacts/*
-eth-project/.envrc
+**/.envrc
+**/env.bat
+**/poetry.lock
