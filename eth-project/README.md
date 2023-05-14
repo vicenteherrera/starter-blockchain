@@ -56,7 +56,10 @@ Alternatively you can use PyEnv to download alternative Python versions:
 ### Install requirements
 
 On Windows you may need:
-* [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools) (desktop development tools)
+* [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools)  
+  (You only need to install "Desktop development with C++")
+
+
 
 **With a virtual environment**
 
