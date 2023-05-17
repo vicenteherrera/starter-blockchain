@@ -3,26 +3,26 @@ from eth_account import Account
 from eth_account.signers.local import LocalAccount
 from web3 import Web3
 from web3.middleware import construct_sign_and_send_raw_middleware
+import sys
 
-## IP ADDRESS to Ethereum node
-ip = os.environ.get("ethnet_ip").replace("\"","")
+## URL endpoint to Ethereum node
+eth_url = os.environ.get("ETH_URL").replace("\"","")
 # Or hardcode the value here
-# ip = "127.0.0.1"
-# If using Windows and WSL2 Linux, set Ganache to expose through WSL2 interface IP like 172.23.64.1
-# ip = "172.23.64.1"
+# Ganache:
+# eth_url="http://127.0.0.1:7545"
+# If you are running Python from WSL, change Ganache to broadcast on this IP
+# eth_url="http://172.23.64.1:7545"
+# If using Infura, specify the project_id at the end of the URL
+# eth_url="http://sepolia.infura.io/v3/replace_with_project_id"
 
-## PORT to Ethereum node
-port = os.environ.get("ethnet_port").replace("\"","")
-# or hardcode the value here, Ganache uses port 7545, other networks uses 8545
-# port = "7545"
 
 # Connection using HTTP
-print("Connecting to "+ ip + " at port "+port)
-w3 = Web3(Web3.HTTPProvider("http://" + ip + ":"+port))
+print("Connecting to "+ eth_url )
+w3 = Web3(Web3.HTTPProvider( eth_url ))
 connected = w3.is_connected()
 print("Connected: "+str(connected))
 if not connected:
-  exit
+  sys.exit(1)
 
 # Test connection showing information for latest block in the blockchain
 last_block=w3.eth.get_block('latest')
@@ -52,7 +52,7 @@ print("Initial balance of wallets")
 print("Balance (" + address + "): " + str(w3.eth.get_balance(address) ))
 print("Balance (" + address2 + "): " + str(w3.eth.get_balance(address2) ))
 
-amount = w3.to_wei(1, 'ether')
+amount = w3.to_wei(0.01, 'ether')
 
 # Example transaction, automatic gas calculation
 # print("Sending transaction")

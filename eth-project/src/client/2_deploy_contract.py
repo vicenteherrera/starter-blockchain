@@ -19,16 +19,24 @@ def deploy_contract(w3, contract_interface, from_address):
     address = w3.eth.get_transaction_receipt(tx_hash)['contractAddress']
     return address
 
-# Connection using HTTP
-ip = os.environ.get("ethnet_ip").replace("\"","")
-port = os.environ.get("ethnet_port").replace("\"","")
+## URL endpoint to Ethereum node
+eth_url = os.environ.get("ETH_URL").replace("\"","")
+# Or hardcode the value here
+# Ganache:
+# eth_url="http://127.0.0.1:7545"
+# If you are running Python from WSL, change Ganache to broadcast on this IP
+# eth_url="http://172.23.64.1:7545"
+# If using Infura, specify the project_id at the end of the URL
+# eth_url="http://sepolia.infura.io/v3/replace_with_project_id"
 
-print("Connecting to "+ ip + " at port "+port)
-w3 = Web3(Web3.HTTPProvider("http://" + ip + ":"+port))
+
+# Connection using HTTP
+print("Connecting to "+ eth_url )
+w3 = Web3(Web3.HTTPProvider( eth_url ))
 connected = w3.is_connected()
 print("Connected: "+str(connected))
 if not connected:
-  exit
+  sys.exit(1)
 
 # Compile contract
 install_solc("0.8.2")
