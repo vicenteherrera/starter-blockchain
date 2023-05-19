@@ -14,4 +14,4 @@ REM If you are running Python from WSL, change Ganache to broadcast on this IP
 REM set ETH_URL="http://172.23.64.1:7545"
 
 REM If using Infura, specify the project_id at the end of the URL
-set set ETH_URL="http://sepolia.infura.io/v3/replace_with_project_id"
+set ETH_URL="https://sepolia.infura.io/v3/replace_with_project_id"
