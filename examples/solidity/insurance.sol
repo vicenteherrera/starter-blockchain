@@ -16,16 +16,4 @@ contract Insurance {
 
     //-- Created new code here -----------------------------
 
-    function setPayAmount(uint256 newAmount) public payable isOwner {
-        // Stored money plus sent here has to be equal or more than newAmount
-        require( address(this).balance >= newAmount );
-        payoutAmount = newAmount;
-    }
-
-    function setPremiumAmount(uint256 newPremiumAmount) public payable isOwner {
-        // Stored money plus sent here has to be equal or more than newAmount
-        require( address(this).balance >= newPremiumAmount );
-        premiumAmount = newPremiumAmount;
-    }
-
 }
