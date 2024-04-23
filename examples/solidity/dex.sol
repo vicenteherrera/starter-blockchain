@@ -14,7 +14,7 @@ contract DEX {
     event Sold(uint256 amount);
 
     constructor() {
-        token = new VicenteCoins();
+        token = new VicenteCoin();
     }
     function buy() payable public {
         uint256 amountTobuy = msg.value;
