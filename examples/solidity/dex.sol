@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 // https://dev.to/emkay860/create-a-decentralized-exchange-dex-for-erc-20-token-kpm
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol";
-import './coin.sol';
+import './VicenteCoin.sol';
 
 contract DEX {
 
@@ -15,6 +15,8 @@ contract DEX {
 
     constructor() {
         token = new VicenteCoin();
+        // Alternative, import ERC20.sol from OpenZeppelin, and use:
+        // token = ERC20(tokenAddress)
     }
     function buy() payable public {
         uint256 amountTobuy = msg.value;
