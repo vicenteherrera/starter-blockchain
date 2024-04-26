@@ -1,0 +1,4 @@
+eth_account==0.11.2
+py_solc_x==2.0.2
+python-dotenv==1.0.1
+web3==6.17.2
