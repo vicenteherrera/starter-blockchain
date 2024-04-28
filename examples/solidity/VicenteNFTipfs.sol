@@ -10,7 +10,7 @@ contract VicenteNFTipfs is ERC721URIStorage, Ownable(msg.sender) {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
 
-    constructor() ERC721("DecentralisedNFT", "DNFT") {}
+    constructor() ERC721("VicenteNFTipfs", "VNI") {}
 
     function _baseURI() internal pure override returns (string memory) {
         return "ipfs://";
