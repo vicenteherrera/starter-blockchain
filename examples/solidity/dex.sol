@@ -1,6 +1,8 @@
 //SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
+// Open in Remix IDE online with: https://remix.ethereum.org/vicenteherrera/starter-blockchain/blob/main/examples/solidity/dex.sol
+
 // https://dev.to/emkay860/create-a-decentralized-exchange-dex-for-erc-20-token-kpm
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol";
@@ -15,8 +17,6 @@ contract DEX {
 
     constructor() {
         token = new VicenteCoin();
-        // Alternative, import ERC20.sol from OpenZeppelin, and use:
-        // token = ERC20(tokenAddress)
     }
     function buy() payable public {
         uint256 amountTobuy = msg.value;

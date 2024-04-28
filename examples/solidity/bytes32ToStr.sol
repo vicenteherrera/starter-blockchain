@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: UNLICENSED
 
+// Open in Remix IDE online with: https://remix.ethereum.org/vicenteherrera/starter-blockchain/blob/main/examples/solidity/bytes32ToStr.sol
+
 pragma solidity >=0.8.2 <0.9.0;
 
 contract Bytes32ToString {

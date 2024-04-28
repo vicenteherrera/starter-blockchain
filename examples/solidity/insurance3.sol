@@ -1,5 +1,7 @@
 // SPDX-License-Identifier: GPL-3.0
 
+// Open in Remix IDE online with: https://remix.ethereum.org/vicenteherrera/starter-blockchain/blob/main/examples/solidity/insurance3.sol
+
 pragma solidity >=0.8.2 <0.9.0;
 
 import "hardhat/console.sol"; // <- do not forget
