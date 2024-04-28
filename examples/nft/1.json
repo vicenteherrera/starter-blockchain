@@ -1,0 +1,15 @@
+{
+  "name": "Vicente #1",
+  "description": "Un tipo muy majo.",
+  "image": "https://vicenteherrera.com/nft/1.jpg",
+  "attributes": [
+      {
+          "trait_type": "Background",
+          "value": "Blue"
+      },
+      {
+          "trait_type": "Style",
+          "value": "Cropped"
+      }
+  ]
+}

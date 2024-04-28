@@ -1,0 +1,15 @@
+{
+  "name": "Vicente #2",
+  "description": "¡Preparado para todo!",
+  "image": "https://vicenteherrera.com/nft/2.jpg",
+  "attributes": [
+      {
+          "trait_type": "Background",
+          "value": "White"
+      },
+      {
+          "trait_type": "Style",
+          "value": "Natural"
+      }
+  ]
+}

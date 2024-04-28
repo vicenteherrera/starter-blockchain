@@ -1,0 +1,16 @@
+{
+  "name": "Vicente #ipfs",
+  "description": "May the force be with you",
+  "image": "QmQom7Ex2UuT3rni2JN9jfSMseiiaWaEQiqxuk3RAM59pZ",
+  "external_url": "https://vicenteherrera.com",
+  "attributes": [
+      {
+          "trait_type": "Pilot X-Wing",
+          "value": "Proficient"
+      },
+      {
+          "trait_type": "Force sensing",
+          "value": "Low"
+      }
+  ]
+}
