@@ -1,4 +1,4 @@
-eth_account==0.8.0
+eth_account==0.11.2
 py_solc_x==1.1.1
 python-dotenv==1.0.1
-web3==6.3.0
+web3==6.17.2
