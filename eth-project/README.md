@@ -29,9 +29,11 @@ Make sure you have Python version 3.9 or later. Then navigate to the `eth-projec
 ```
 cd eth-project
 python -V
-python -m venv myenv
-env\Scripts\Activate # Windows
-source .\env\bin\activate # bash (Linux, MacOs)
+python -m venv .env
+# Example activation for Windows:
+.env\Scripts\Activate
+# Example activation for bash (Linux, MacOs)
+source ./.env/bin/activate
 pip install -r requirements.in
 ```
 
